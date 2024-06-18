@@ -1,0 +1,70 @@
+{
+    "id": 1,
+    "name": "Product 1",
+    "des": "Description for product 1",
+    "sku": "uniqueSku12345",
+    "criteria": [
+        {
+            "name": "color",
+            "values": [
+                "Red",
+                "Blue",
+                "Green"
+            ]
+        },
+        {
+            "name": "size",
+            "values": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ]
+        }
+    ],
+    "variants": [
+        {
+            "variantId": 101,
+            "product_id": 1,
+            "price": 100.00,
+            "barcode": "1234567890123",
+            "sku": "variantSku12345",
+            "specifications": {
+                "color": "Red",
+                "size": "M"
+            },
+            "images": [
+                {
+                    "url": "https://www.example.com/image1.jpg",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://www.example.com/image2.jpg",
+                    "alt": "Image 2"
+                }
+            ]
+        },
+        {
+            "variantId": 102,
+            "product_id": 1,
+            "price": 120.00,
+            "barcode": "1234567890124",
+            "sku": "variantSku12346",
+            "specifications": {
+                "color": "Blue",
+                "size": "L",
+                "weight": 1.5
+            },
+            "images": [
+                {
+                    "url": "https://www.example.com/image1.jpg",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://www.example.com/image2.jpg",
+                    "alt": "Image 2"
+                }
+            ]
+        }
+    ]
+}
