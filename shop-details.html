@@ -11,7 +11,7 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -23,14 +23,19 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
-        .active-color{
+        .active-color {
             filter: brightness(0.5);
         }
-        .active-size{
+
+        .active-size {
             background-color: #000;
         }
-        .active-size span{
+
+        .active-size span {
             color: #fff !important;
+        }
+        .d-grid{
+            display: grid;
         }
     </style>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -159,8 +164,10 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <template x-for="(image, index) in images" :key="index">
                                 <li class="nav-item">
-                                    <a class="nav-link" :class="{ 'active': index === 0 }" :data-toggle="'tab'" :href="'#tabs-' + (index + 1)" role="tab">
-                                        <div class="product__thumb__pic set-bg" :style="'background-image: url(' + image.thumb + ')'">
+                                    <a class="nav-link" :class="{ 'active': index === 0 }" :data-toggle="'tab'"
+                                        :href="'#tabs-' + (index + 1)" role="tab">
+                                        <div class="product__thumb__pic set-bg"
+                                            :style="'background-image: url(' + image.thumb + ')'">
                                         </div>
                                     </a>
                                 </li>
@@ -170,7 +177,8 @@
                     <div class="col-lg-6 col-md-9">
                         <div class="tab-content">
                             <template x-for="(image, index) in images" :key="index">
-                                <div class="tab-pane" :class="{ 'active': index === 0 }" :id="'tabs-' + (index + 1)" role="tabpanel">
+                                <div class="tab-pane" :class="{ 'active': index === 0 }" :id="'tabs-' + (index + 1)"
+                                    role="tabpanel">
                                     <div class="product__details__pic__item">
                                         <img :src="image.url" :alt="image.alt">
                                     </div>
@@ -184,67 +192,84 @@
         <div class="product__details__content">
             <div class="container">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="product__details__text">
-                            <h4 x-text="product.name"></h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                                <span> - 5 Reviews</span>
-                            </div>
-                            <h3 x-text="price"><span>70.00</span></h3>
-                            <p x-text="product.des"></p>
-                            <template x-for="criterion in product.criteria" :key="criterion.name">
-                                <div class="product__details__option">
-                                    <template x-if="criterion.name === 'size'">
-                                        <div class="product__details__option__size">
-                                            <span>Size:</span>
-                                            <template x-for="value in criterion.values" :key="value">
-                                                <!-- add class active for labale -->
-                                                <label :for="`size-${value}`" :class="{'active-size': selectedSize == value}">
-                                                    <span x-text="value"></span>
-                                                    <input type="radio" :id="`size-${value}`" name="size" :value="value" @click="selectSize(value)">
-                                                </label>
-                                            </template>
-                                        </div>
-                                    </template>
-                                    <template x-if="criterion.name === 'color'">
-                                        <div class="product__details__option__color">
-                                            <span>Color:</span>
-                                            <template x-for="value in criterion.values" :key="value">
-                                                <label :for="`color-${value}`" :style="`background-color: ${value};`" :class="{'active-color': selectedColor == value}" @click="selectColor(value)">
-                                                    <input type="radio" :id="`color-${value}`" name="color" :value="value">
-                                                </label>
-                                            </template>
-                                        </div>
-                                    </template>
+                    <div class="col-lg-12">
+                        <div class="product__details__text row">
+                            <div class="col-6">
+                                <h4 x-text="product.name"></h4>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span> - 5 Reviews</span>
                                 </div>
-                            </template>
+                                <h3 class="d-flex align-items-end justify-content-center">
+                                    <div x-text="price"></div>$ <span>70.00</span>
+                                </h3>
+                                <p x-text="product.des"></p>
+                            </div>
                             
-                            <div class="product__details__cart__option">
-                                <div class="quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1">
+                            <div class="col-6 text-left justify-content-center d-grid">
+                                <template x-for="criterion in product.criteria" :key="criterion.name">
+                                    <div class="product__details__option">
+                                        <template x-if="criterion.name === 'size'">
+                                            <div class="product__details__option__size">
+                                                <span>Size:</span>
+                                                <template x-for="value in criterion.values" :key="value">
+                                                    <!-- add class active for labale -->
+                                                    <label :for="`size-${value}`"
+                                                        :class="{'active-size': selectedSize == value}">
+                                                        <span x-text="value"></span>
+                                                        <input type="radio" :id="`size-${value}`" name="size"
+                                                            :value="value" @click="selectSize(value)">
+                                                    </label>
+                                                </template>
+                                            </div>
+                                        </template>
+                                        <template x-if="criterion.name === 'color'">
+                                            <div class="product__details__option__color">
+                                                <span>Color:</span>
+                                                <template x-for="value in criterion.values" :key="value">
+                                                    <label :for="`color-${value}`"
+                                                        :style="`background-color: ${value};`"
+                                                        :class="{'active-color': selectedColor == value}"
+                                                        @click="selectColor(value)">
+                                                        <input type="radio" :id="`color-${value}`" name="color"
+                                                            :value="value">
+                                                    </label>
+                                                </template>
+                                            </div>
+                                        </template>
                                     </div>
+                                </template>
+                                <div class="product__details__cart__option">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1">
+                                        </div>
+                                    </div>
+                                    <a href="#" class="primary-btn">add to cart</a>
                                 </div>
-                                <a href="#" class="primary-btn">add to cart</a>
                             </div>
-                            <div class="product__details__btns__option">
-                                <a href="#"><i class="fa fa-heart"></i> add to wishlist</a>
-                                <a href="#"><i class="fa fa-exchange"></i> Add To Compare</a>
+
+                            <div class="col-12">
+
+                                <div class="product__details__btns__option">
+                                    <a href="#"><i class="fa fa-heart"></i> add to wishlist</a>
+                                    <a href="#"><i class="fa fa-exchange"></i> Add To Compare</a>
+                                </div>
+                                <div class="product__details__last__option">
+                                    <h5><span>Guaranteed Safe Checkout</span></h5>
+                                    <img src="img/shop-details/details-payment.png" alt="">
+                                    <ul>
+                                        <li><span>SKU:</span> 3812912</li>
+                                        <li><span>Categories:</span> Clothes</li>
+                                        <li><span>Tag:</span> Clothes, Skin, Body</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="product__details__last__option">
-                                <h5><span>Guaranteed Safe Checkout</span></h5>
-                                <img src="img/shop-details/details-payment.png" alt="">
-                                <ul>
-                                    <li><span>SKU:</span> 3812912</li>
-                                    <li><span>Categories:</span> Clothes</li>
-                                    <li><span>Tag:</span> Clothes, Skin, Body</li>
-                                </ul>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -254,15 +279,15 @@
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="tab" href="#tabs-5"
-                                    role="tab">Description</a>
+                                        role="tab">Description</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#tabs-6" role="tab">Customer
-                                    Previews(5)</a>
+                                        Previews(5)</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#tabs-7" role="tab">Additional
-                                    information</a>
+                                        information</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
@@ -271,7 +296,7 @@
                                         <p class="note">Nam tempus turpis at metus scelerisque placerat nulla deumantos
                                             solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis
                                             ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo
-                                        pharetras loremos.</p>
+                                            pharetras loremos.</p>
                                         <div class="product__details__tab__content__item">
                                             <h5>Products Infomation</h5>
                                             <p>A Pocket PC is a handheld computer, which features many of the same
@@ -280,13 +305,13 @@
                                                 file, coordinate appointments, surf the internet, exchange text messages
                                                 and more. Every product that is labeled as a Pocket PC must be
                                                 accompanied with specific software to operate the unit and must feature
-                                            a touchscreen and touchpad.</p>
+                                                a touchscreen and touchpad.</p>
                                             <p>As is the case with any new technology product, the cost of a Pocket PC
                                                 was substantial during it’s early release. For approximately $700.00,
                                                 consumers could purchase one of top-of-the-line Pocket PCs in 2003.
                                                 These days, customers are finding that prices have become much more
                                                 reasonable now that the newness is wearing off. For approximately
-                                            $350.00, a new Pocket PC can now be purchased.</p>
+                                                $350.00, a new Pocket PC can now be purchased.</p>
                                         </div>
                                         <div class="product__details__tab__content__item">
                                             <h5>Material used</h5>
@@ -296,7 +321,7 @@
                                                 tend to have a shine to them compared to wool and cotton suits, this can
                                                 make the suit look cheap. The texture of velvet is luxurious and
                                                 breathable. Velvet is a great choice for dinner party jacket and can be
-                                            worn all year round.</p>
+                                                worn all year round.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -310,13 +335,13 @@
                                                 file, coordinate appointments, surf the internet, exchange text messages
                                                 and more. Every product that is labeled as a Pocket PC must be
                                                 accompanied with specific software to operate the unit and must feature
-                                            a touchscreen and touchpad.</p>
+                                                a touchscreen and touchpad.</p>
                                             <p>As is the case with any new technology product, the cost of a Pocket PC
                                                 was substantial during it’s early release. For approximately $700.00,
                                                 consumers could purchase one of top-of-the-line Pocket PCs in 2003.
                                                 These days, customers are finding that prices have become much more
                                                 reasonable now that the newness is wearing off. For approximately
-                                            $350.00, a new Pocket PC can now be purchased.</p>
+                                                $350.00, a new Pocket PC can now be purchased.</p>
                                         </div>
                                         <div class="product__details__tab__content__item">
                                             <h5>Material used</h5>
@@ -326,7 +351,7 @@
                                                 tend to have a shine to them compared to wool and cotton suits, this can
                                                 make the suit look cheap. The texture of velvet is luxurious and
                                                 breathable. Velvet is a great choice for dinner party jacket and can be
-                                            worn all year round.</p>
+                                                worn all year round.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -335,7 +360,7 @@
                                         <p class="note">Nam tempus turpis at metus scelerisque placerat nulla deumantos
                                             solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis
                                             ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo
-                                        pharetras loremos.</p>
+                                            pharetras loremos.</p>
                                         <div class="product__details__tab__content__item">
                                             <h5>Products Infomation</h5>
                                             <p>A Pocket PC is a handheld computer, which features many of the same
@@ -344,13 +369,13 @@
                                                 file, coordinate appointments, surf the internet, exchange text messages
                                                 and more. Every product that is labeled as a Pocket PC must be
                                                 accompanied with specific software to operate the unit and must feature
-                                            a touchscreen and touchpad.</p>
+                                                a touchscreen and touchpad.</p>
                                             <p>As is the case with any new technology product, the cost of a Pocket PC
                                                 was substantial during it’s early release. For approximately $700.00,
                                                 consumers could purchase one of top-of-the-line Pocket PCs in 2003.
                                                 These days, customers are finding that prices have become much more
                                                 reasonable now that the newness is wearing off. For approximately
-                                            $350.00, a new Pocket PC can now be purchased.</p>
+                                                $350.00, a new Pocket PC can now be purchased.</p>
                                         </div>
                                         <div class="product__details__tab__content__item">
                                             <h5>Material used</h5>
@@ -360,7 +385,7 @@
                                                 tend to have a shine to them compared to wool and cotton suits, this can
                                                 make the suit look cheap. The texture of velvet is luxurious and
                                                 breathable. Velvet is a great choice for dinner party jacket and can be
-                                            worn all year round.</p>
+                                                worn all year round.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -582,7 +607,7 @@
                                 document.write(new Date().getFullYear());
                             </script>2020
                             All rights reserved | This template is made with <i class="fa fa-heart-o"
-                            aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                         </p>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </div>
@@ -633,16 +658,18 @@
                             this.selectedColor = data.variants[0].specifications.color;
                         });
                 },
-                selectSize(size) {
-                    this.selectedSize = size;
-                    // get variant price with new size and color
-                    const variant = this.product.variants.find(variant => variant.specifications.size === size && variant.specifications.color === this.selectedColor);
+                updateCurrentVariant() {
+                    const variant = this.product.variants.find(variant => variant.specifications.size === this.selectedSize && variant.specifications.color === this.selectedColor);
                     this.price = variant.price;
                     this.images = variant.images;
-                    console.log(this.images);
+                },
+                selectSize(size) {
+                    this.selectedSize = size;
+                    this.updateCurrentVariant();
                 },
                 selectColor(color) {
                     this.selectedColor = color;
+                    this.updateCurrentVariant();
                 }
             };
         }

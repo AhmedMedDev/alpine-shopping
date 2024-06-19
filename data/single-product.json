@@ -68,6 +68,236 @@
                     "alt": "Image 2"
                 }
             ]
+        },
+        {
+            "variantId": 103,
+            "product_id": 1,
+            "price": 150.00,
+            "barcode": "1234567890125",
+            "sku": "variantSku12347",
+            "specifications": {
+                "color": "#00ff00",
+                "size": "xxl"
+            },
+            "images": [
+                {
+                    "url": "https://placehold.co/800x600?text=Variant103+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://placehold.co/800x600?text=Variant103+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 2"
+                }
+            ]
+        },
+        {
+            "variantId": 104,
+            "product_id": 1,
+            "price": 200.00,
+            "barcode": "1234567890126",
+            "sku": "variantSku12348",
+            "specifications": {
+                "color": "#ff0000",
+                "size": "xl"
+            },
+            "images": [
+                {
+                    "url": "https://placehold.co/800x600?text=Variant104+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://placehold.co/800x600?text=Variant104+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 2"
+                }
+            ]
+        },
+        {
+            "variantId": 105,
+            "product_id": 1,
+            "price": 180.00,
+            "barcode": "1234567890127",
+            "sku": "variantSku12349",
+            "specifications": {
+                "color": "#0000ff",
+                "size": "l"
+            },
+            "images": [
+                {
+                    "url": "https://placehold.co/800x600?text=Variant105+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://placehold.co/800x600?text=Variant105+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 2"
+                }
+            ]
+        },
+        {
+            "variantId": 106,
+            "product_id": 1,
+            "price": 220.00,
+            "barcode": "1234567890128",
+            "sku": "variantSku12350",
+            "specifications": {
+                "color": "#00ff00",
+                "size": "sm"
+            },
+            "images": [
+                {
+                    "url": "https://placehold.co/800x600?text=Variant106+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://placehold.co/800x600?text=Variant106+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 2"
+                }
+            ]
+        },
+        {
+            "variantId": 107,
+            "product_id": 1,
+            "price": 190.00,
+            "barcode": "1234567890129",
+            "sku": "variantSku12351",
+            "specifications": {
+                "color": "#ff0000",
+                "size": "xxl"
+            },
+            "images": [
+                {
+                    "url": "https://placehold.co/800x600?text=Variant107+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://placehold.co/800x600?text=Variant107+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 2"
+                }
+            ]
+        },
+        {
+            "variantId": 108,
+            "product_id": 1,
+            "price": 160.00,
+            "barcode": "1234567890130",
+            "sku": "variantSku12352",
+            "specifications": {
+                "color": "#0000ff",
+                "size": "xxl"
+            },
+            "images": [
+                {
+                    "url": "https://placehold.co/800x600?text=Variant108+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://placehold.co/800x600?text=Variant108+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 2"
+                }
+            ]
+        },
+        {
+            "variantId": 109,
+            "product_id": 1,
+            "price": 140.00,
+            "barcode": "1234567890131",
+            "sku": "variantSku12353",
+            "specifications": {
+                "color": "#00ff00",
+                "size": "l"
+            },
+            "images": [
+                {
+                    "url": "https://placehold.co/800x600?text=Variant109+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://placehold.co/800x600?text=Variant109+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 2"
+                }
+            ]
+        },
+        {
+            "variantId": 110,
+            "product_id": 1,
+            "price": 250.00,
+            "barcode": "1234567890132",
+            "sku": "variantSku12354",
+            "specifications": {
+                "color": "#ff0000",
+                "size": "l"
+            },
+            "images": [
+                {
+                    "url": "https://placehold.co/800x600?text=Variant110+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://placehold.co/800x600?text=Variant110+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 2"
+                }
+            ]
+        },
+        {
+            "variantId": 111,
+            "product_id": 1,
+            "price": 130.00,
+            "barcode": "1234567890133",
+            "sku": "variantSku12355",
+            "specifications": {
+                "color": "#0000ff",
+                "size": "sm"
+            },
+            "images": [
+                {
+                    "url": "https://placehold.co/800x600?text=Variant111+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://placehold.co/800x600?text=Variant111+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 2"
+                }
+            ]
+        },
+        {
+            "variantId": 112,
+            "product_id": 1,
+            "price": 300.00,
+            "barcode": "1234567890134",
+            "sku": "variantSku12356",
+            "specifications": {
+                "color": "#00ff00",
+                "size": "xl"
+            },
+            "images": [
+                {
+                    "url": "https://placehold.co/800x600?text=Variant112+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 1"
+                },
+                {
+                    "url": "https://placehold.co/800x600?text=Variant112+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
+                    "alt": "Image 2"
+                }
+            ]
         }
     ]
 }
