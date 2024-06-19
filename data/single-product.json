@@ -1,24 +1,24 @@
 {
     "id": 1,
-    "name": "Product 1",
-    "des": "Description for product 1",
+    "name": "Hooded thermal anorak",
+    "des": "Coat with quilted lining and an adjustable hood. Featuring long sleeves with adjustable cuff tabs, adjustable asymmetric hem with elastic side tabs and a front zip fastening with placket.",
     "sku": "uniqueSku12345",
     "criteria": [
         {
             "name": "color",
             "values": [
-                "Red",
-                "Blue",
-                "Green"
+                "#ff0000",
+                "#0000ff",
+                "#00ff00"
             ]
         },
         {
             "name": "size",
             "values": [
-                "S",
-                "M",
-                "L",
-                "XL"
+                "xxl",
+                "xl",
+                "l",
+                "sm"
             ]
         }
     ],
@@ -26,20 +26,22 @@
         {
             "variantId": 101,
             "product_id": 1,
-            "price": 100.00,
+            "price": 270.00,
             "barcode": "1234567890123",
             "sku": "variantSku12345",
             "specifications": {
-                "color": "Red",
-                "size": "M"
+                "color": "#ff0000",
+                "size": "sm"
             },
             "images": [
                 {
-                    "url": "https://www.example.com/image1.jpg",
+                    "url": "https://placehold.co/800x600?text=Variant101+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://www.example.com/image2.jpg",
+                    "url": "https://placehold.co/800x600?text=Variant101+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
             ]
@@ -51,17 +53,18 @@
             "barcode": "1234567890124",
             "sku": "variantSku12346",
             "specifications": {
-                "color": "Blue",
-                "size": "L",
-                "weight": 1.5
+                "color": "#0000ff",
+                "size": "xl"
             },
             "images": [
                 {
-                    "url": "https://www.example.com/image1.jpg",
+                    "url": "https://placehold.co/800x600?text=Variant102+Image1",
+                    "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://www.example.com/image2.jpg",
+                    "url": "https://placehold.co/800x600?text=Variant102+Image2",
+                    "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
             ]
