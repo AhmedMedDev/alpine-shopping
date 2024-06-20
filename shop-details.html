@@ -14,7 +14,8 @@
         rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
@@ -194,7 +195,7 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-12">
                         <div class="product__details__text row">
-                            <div class="col-6">
+                            <div class="col-md-6 m-12">
                                 <h4 x-text="product.name"></h4>
                                 <div class="rating">
                                     <i class="fa fa-star"></i>
@@ -210,7 +211,7 @@
                                 <p x-text="product.des"></p>
                             </div>
                             
-                            <div class="col-6 text-left justify-content-center d-grid">
+                            <div class="col-md-6 m-12 text-left justify-content-center d-grid">
                                 <template x-for="criterion in product.criteria" :key="criterion.name">
                                     <div class="product__details__option">
                                         <template x-if="criterion.name === 'size'">
@@ -238,6 +239,17 @@
                                                         <input type="radio" :id="`color-${value}`" name="color"
                                                             :value="value">
                                                     </label>
+                                                </template>
+                                            </div>
+                                        </template>
+                                        <template x-if="criterion.name !== 'size' && criterion.name !== 'color'">
+                                            <div class="product__details__option__other d-flex align-items-center justify-content-between">
+                                                <span x-text="criterion.name.charAt(0).toUpperCase() + criterion.name.slice(1) + ':'"></span>
+                                                <template x-for="value in criterion.values" :key="value">
+                                                    <div class="">
+                                                        <input type="radio" class="btn-check" :name="`${criterion.name}-${product.id}`" :id="`${criterion.name}-${product.id}-${value}`" :value="value" @click="selectOption(criterion.name, value)">
+                                                        <label class="btn btn-outline-dark" :for="`${criterion.name}-${product.id}-${value}`" x-text="value"></label>
+                                                    </div>
                                                 </template>
                                             </div>
                                         </template>
@@ -630,7 +642,8 @@
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
@@ -647,6 +660,7 @@
                 selectedColor: null,
                 price: 0,
                 images: [],
+                selectedOptions: {},
                 init() {
                     fetch('./data/single-product.json')
                         .then(response => response.json())
@@ -656,6 +670,8 @@
                             this.images = data.variants[0].images;
                             this.selectedSize = data.variants[0].specifications.size;
                             this.selectedColor = data.variants[0].specifications.color;
+                            this.selectedOptions['size'] = this.selectedSize;
+                            this.selectedOptions['color'] = this.selectedColor;
                         });
                 },
                 updateCurrentVariant() {
@@ -665,11 +681,19 @@
                 },
                 selectSize(size) {
                     this.selectedSize = size;
+                    this.selectedOptions['size'] = this.selectedSize;
                     this.updateCurrentVariant();
                 },
                 selectColor(color) {
                     this.selectedColor = color;
+                    this.selectedOptions['color'] = this.selectedColor;
                     this.updateCurrentVariant();
+                },
+                selectOption(optionName, value) {
+                    this.selectedOptions[optionName] = value;
+                    const variant = this.product.variants.find(variant => Object.keys(this.selectedOptions).every(optionName => variant.specifications[optionName] == this.selectedOptions[optionName]));
+                    this.price = variant?.price;
+                    this.images = variant?.images;
                 }
             };
         }

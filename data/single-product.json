@@ -35,12 +35,12 @@
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant101+Image1",
+                    "url": "https://placehold.co/800x600/ff0000/FFF?text=SM",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant101+Image2",
+                    "url": "https://placehold.co/800x600/ff0000/FFF?text=SM+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
@@ -54,16 +54,17 @@
             "sku": "variantSku12346",
             "specifications": {
                 "color": "#0000ff",
-                "size": "xl"
+                "size": "xl",
+                "material": "cotton"
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant102+Image1",
+                    "url": "https://placehold.co/800x600/0000ff/FFF?text=XL",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant102+Image2",
+                    "url": "https://placehold.co/800x600/0000ff/FFF?text=XL+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
@@ -81,12 +82,12 @@
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant103+Image1",
+                    "url": "https://placehold.co/800x600/00ff00/FFF?text=XXL",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant103+Image2",
+                    "url": "https://placehold.co/800x600/00ff00/FFF?text=XXL+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
@@ -104,12 +105,12 @@
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant104+Image1",
+                    "url": "https://placehold.co/800x600/ff0000/FFF?text=XL",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant104+Image2",
+                    "url": "https://placehold.co/800x600/ff0000/FFF?text=XL+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
@@ -127,12 +128,12 @@
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant105+Image1",
+                    "url": "https://placehold.co/800x600/0000ff/FFF?text=L",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant105+Image2",
+                    "url": "https://placehold.co/800x600/0000ff/FFF?text=L+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
@@ -150,12 +151,12 @@
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant106+Image1",
+                    "url": "https://placehold.co/800x600/00ff00/FFF?text=SM",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant106+Image2",
+                    "url": "https://placehold.co/800x600/00ff00/FFF?text=SM+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
@@ -173,12 +174,12 @@
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant107+Image1",
+                    "url": "https://placehold.co/800x600/ff0000/FFF?text=XXL",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant107+Image2",
+                    "url": "https://placehold.co/800x600/ff0000/FFF?text=XXL+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
@@ -196,12 +197,12 @@
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant108+Image1",
+                    "url": "https://placehold.co/800x600/0000ff/FFF?text=XXL",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant108+Image2",
+                    "url": "https://placehold.co/800x600/0000ff/FFF?text=XXL+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
@@ -219,12 +220,12 @@
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant109+Image1",
+                    "url": "https://placehold.co/800x600/00ff00/FFF?text=L",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant109+Image2",
+                    "url": "https://placehold.co/800x600/00ff00/FFF?text=L+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
@@ -242,12 +243,12 @@
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant110+Image1",
+                    "url": "https://placehold.co/800x600/ff0000/FFF?text=L",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant110+Image2",
+                    "url": "https://placehold.co/800x600/ff0000/FFF?text=L+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
@@ -265,12 +266,12 @@
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant111+Image1",
+                    "url": "https://placehold.co/800x600/0000ff/FFF?text=SM",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant111+Image2",
+                    "url": "https://placehold.co/800x600/0000ff/FFF?text=SM+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
@@ -288,12 +289,12 @@
             },
             "images": [
                 {
-                    "url": "https://placehold.co/800x600?text=Variant112+Image1",
+                    "url": "https://placehold.co/800x600/00ff00/FFF?text=XL",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 1"
                 },
                 {
-                    "url": "https://placehold.co/800x600?text=Variant112+Image2",
+                    "url": "https://placehold.co/800x600/00ff00/FFF?text=XL+2",
                     "thumb": "https://placehold.co/200x150?text=..",
                     "alt": "Image 2"
                 }
